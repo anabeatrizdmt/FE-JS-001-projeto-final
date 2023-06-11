@@ -1,46 +1,25 @@
 body {
-    margin: 50px;
-}
-
-body,
-a {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
     font-family: "Google Sans", "Roboto", Arial, sans-serif;
     color: rgb(53, 53, 53);
 }
 
-.header-container,
-.main-container,
-.footer-container,
-h1,
-h3,
-.contacts,
-.summary,
-.experience {
-    padding-top: 20px;
+a {
+    color: inherit;
 }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
+h1 {
+    padding-top: 10px;
+    font-size: 30px;
 }
 
-@media (min-width: 768px) {
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-.contacts>div>img {
-    width: 30px;
-    height: 30px;
-}
-
-hr {
-    border: none;
-    height: 2px;
-    background-color: #333;
+h3 {
+    padding-top: 10px;
+    font-size: 20px;
 }
 
 ul {
@@ -48,9 +27,103 @@ ul {
     padding-left: 0;
 }
 
+header {
+    border-bottom: 4px solid gray;
+}
+
+.header-photo {
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 8px solid gray;
+    box-shadow: 0 0 15px gray;
+}
+
+.contacts div {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.contacts>div>img,
+.social-media>div>a>img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-media>div {
+    padding: 0;
+    margin: 5px;
+}
+
+.social-media {
+    width: 100%;
+    background-color: gray;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.main-container,
+.contacts {
+    padding-top: 20px;
+}
+
 footer {
     text-align: center;
+    margin-top: 30px;
     padding: 5px;
     background-color: #abbaba;
     color: #000;
+}
+
+@media (min-width: 992px) {
+
+    .body-container {
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-photo {
+        justify-content: flex-end;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-media {
+        min-width: 49px;
+        padding-left: 0;
+    }
+
+    .social-media-container {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    
+    .social-media>div {
+        padding: 0;
+        margin: 5px;
+    }
+
+    h1,
+    h3 {
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
 }
